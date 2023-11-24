@@ -1,7 +1,7 @@
 ---
-- name: Your Ansible Playbook
+- name: Simple Ansible Playbook
   hosts: "{{ HOSTS }}"
   tasks:
-    - name: Example Task
+    - name: Print a message
       debug:
-        msg: "Hello, {{ target_hosts }}!"
+        msg: "Hello from Ansible on {{ inventory_hostname }}"
