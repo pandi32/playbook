@@ -1,6 +1,6 @@
 ---
-- name: My Ansible Playbook
-  hosts: "{{ target_hosts }}"
+- name: Your Ansible Playbook
+  hosts: "{{ HOSTS }}"
   tasks:
     - name: Example Task
       debug:
