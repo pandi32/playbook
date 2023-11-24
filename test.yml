@@ -1,12 +1,7 @@
 ---
-- name: Check uptime
-  hosts: all
-  become: true
+- name: My Ansible Playbook
+  hosts: "{{ target_hosts }}"
   tasks:
-    - name: Get uptime
-      shell: uptime | grep -ohe 'up .*' | sed 's/,//g' | awk '{ print $2" "$3 }'
-      register: uptime
-    - name: Debug uptime
+    - name: Example Task
       debug:
-        msg: "{{ item }}"
-      with_items: "{{ uptime.stdout }}"
+        msg: "Hello, {{ target_hosts }}!"
